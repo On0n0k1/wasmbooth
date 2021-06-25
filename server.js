@@ -1,7 +1,11 @@
-const Hapi = require('hapi');
+const Hapi = require('@hapi/hapi');
 const Inert = require('inert');
 
-const server = new Hapi.Server({ port: 4000 });
+// const server = new Hapi.Server({ port: 4000 });
+const server = Hapi.server({
+    port: 4000,
+    host: 'localhost'
+});
 
 const start = async () => {
 
